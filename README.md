@@ -96,8 +96,7 @@ Corrige inversão de sinal quando aplicável e registra auditoria da correção.
 
 **PASSO 9 — Imputação de `financed_amount` (NaN) usando `outstanding_balance`**  
 - Imputa somente quando `outstanding_balance` é válido (>= 0)  
-- Cria flag `financed_amount_imputed`  
-- **Observação importante:** o teste **`outstanding_balance > financed_amount`** é **medido e logado**, mas a decisão de negócio fica para análise (ver nota abaixo).
+- Cria flag `financed_amount_imputed`
 
 **PASSO 10 — Remoção de `product_id` inválido (FK)**  
 Remove registros com FK quebrada / ausente, garantindo integridade com `dim_produto`.
